@@ -2,11 +2,15 @@
   "name": "nelson-muntz-marketplace",
   "description": "Marketplace for the Nelson Muntz adversarial security plugin",
   "version": "1.0.0",
+  "owner": {
+    "name": "zkarimi22",
+    "url": "https://github.com/zkarimi22"
+  },
   "plugins": [
     {
       "name": "nelson-muntz",
-      "path": ".",
-      "description": "Adversarial security & code quality reviewer. Hostile code bully that keeps attacking your code until it's bulletproof. Ha-ha!"
+      "description": "Adversarial security & code quality reviewer. Hostile code bully that keeps attacking your code until it's bulletproof. Ha-ha!",
+      "source": "."
     }
   ]
 }
