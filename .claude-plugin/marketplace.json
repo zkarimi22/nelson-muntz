@@ -1,21 +1,21 @@
 {
-  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "nelson-muntz-marketplace",
-  "description": "Marketplace for the Nelson Muntz adversarial security plugin",
   "owner": {
-    "name": "zkarimi22",
-    "email": "zkarimi22@users.noreply.github.com"
+    "name": "zkarimi22"
+  },
+  "metadata": {
+    "description": "Marketplace for the Nelson Muntz adversarial security plugin",
+    "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "nelson-muntz",
+      "source": "./",
       "description": "Adversarial security & code quality reviewer. Hostile code bully that keeps attacking your code until it's bulletproof. Ha-ha!",
       "version": "1.0.0",
       "author": {
-        "name": "zkarimi22",
-        "email": "zkarimi22@users.noreply.github.com"
+        "name": "zkarimi22"
       },
-      "source": ".",
       "category": "security",
       "homepage": "https://github.com/zkarimi22/nelson-muntz"
     }
