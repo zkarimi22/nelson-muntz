@@ -2,13 +2,11 @@
   "name": "nelson-muntz",
   "description": "Adversarial security & code quality reviewer. Hostile code bully that keeps attacking your code until it's bulletproof. Ha-ha!",
   "version": "1.0.0",
-  "commands": ["commands/nelson-attack.md"],
-  "skills": [
-    "skills/security-patterns",
-    "skills/adversarial-thinking",
-    "skills/code-quality"
-  ],
-  "hooks": {
-    "stop": "hooks/stop.sh"
-  }
+  "author": {
+    "name": "zkarimi22"
+  },
+  "homepage": "https://github.com/zkarimi22/nelson-muntz",
+  "repository": "https://github.com/zkarimi22/nelson-muntz",
+  "license": "MIT",
+  "keywords": ["security", "code-review", "adversarial", "pentesting"]
 }

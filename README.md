@@ -17,6 +17,18 @@ Nelson is a hostile code bully who keeps attacking your code until it's bulletpr
 
 ## Installation
 
+### Via Marketplace (Recommended)
+
+```bash
+# Add the marketplace
+/plugin marketplace add https://github.com/zkarimi22/nelson-muntz
+
+# Install the plugin
+/plugin install nelson-muntz
+```
+
+### Via Local Directory
+
 ```bash
 # Clone the plugin
 git clone https://github.com/zkarimi22/nelson-muntz.git
@@ -25,28 +37,26 @@ git clone https://github.com/zkarimi22/nelson-muntz.git
 claude --plugin-dir /path/to/nelson-muntz
 ```
 
-Or add to your Claude Code configuration to load automatically.
-
 ## Usage
 
 ### Basic Attack
 
 ```bash
-/nelson-attack "Review my authentication system"
+/nelson-muntz:nelson-attack "Review my authentication system"
 ```
 
 ### With Max Iterations
 
 ```bash
-/nelson-attack "Audit all API endpoints" --max-iterations 10
+/nelson-muntz:nelson-attack "Audit all API endpoints" --max-iterations 10
 ```
 
 ### Target Specific Code
 
 ```bash
-/nelson-attack "Review the user registration flow in auth.js"
-/nelson-attack "Check database queries in models/"
-/nelson-attack "Full security audit of this codebase"
+/nelson-muntz:nelson-attack "Review the user registration flow in auth.js"
+/nelson-muntz:nelson-attack "Check database queries in models/"
+/nelson-muntz:nelson-attack "Full security audit of this codebase"
 ```
 
 ## What Nelson Finds
@@ -232,7 +242,7 @@ app.use((err, req, res, next) => {
 
 Run:
 ```bash
-/nelson-attack "Review vulnerable.js"
+/nelson-muntz:nelson-attack "Review vulnerable.js"
 ```
 
 ## Plugin Structure
@@ -240,7 +250,8 @@ Run:
 ```
 nelson-muntz/
 ├── .claude-plugin/
-│   └── plugin.json              # Plugin metadata
+│   ├── plugin.json              # Plugin metadata
+│   └── marketplace.json         # Marketplace wrapper for distribution
 ├── commands/
 │   └── nelson-attack.md         # Main attack command
 ├── skills/
@@ -251,7 +262,8 @@ nelson-muntz/
 │   └── code-quality/
 │       └── SKILL.md             # Code smells, quality issues
 ├── hooks/
-│   └── stop.sh                  # Loop control hook
+│   ├── hooks.json               # Hook configuration
+│   └── stop.sh                  # Loop control script
 └── README.md                    # This file
 ```
 
