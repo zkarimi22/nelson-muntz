@@ -39,24 +39,24 @@ claude --plugin-dir /path/to/nelson-muntz
 
 ## Usage
 
-### Basic Attack
+1. **Start Claude Code** in your project directory:
+   ```bash
+   claude
+   ```
+
+2. **Run the attack** with your target:
+   ```bash
+   /nelson-muntz:nelson-attack "Review my authentication system"
+   ```
+
+3. **Nelson bullies your code** - he'll keep attacking until he can't find anything else to mock. All findings are saved to `.nelson_state.json` in your project.
+
+### Example Targets
 
 ```bash
-/nelson-muntz:nelson-attack "Review my authentication system"
-```
-
-### With Max Iterations
-
-```bash
-/nelson-muntz:nelson-attack "Audit all API endpoints" --max-iterations 10
-```
-
-### Target Specific Code
-
-```bash
-/nelson-muntz:nelson-attack "Review the user registration flow in auth.js"
-/nelson-muntz:nelson-attack "Check database queries in models/"
 /nelson-muntz:nelson-attack "Full security audit of this codebase"
+/nelson-muntz:nelson-attack "Review the auth flow in src/auth.js"
+/nelson-muntz:nelson-attack "Check all database queries"
 ```
 
 ## What Nelson Finds
